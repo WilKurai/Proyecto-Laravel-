@@ -42,12 +42,6 @@
                 <td class="px-6 py-4">
                     {{$proveedor->telefono}}
                 </td>
-                {{-- <td>
-                    <a href="{{ route('proveedor.create', $proveedor) }}" class="btn btn-primary">Editar</a>
-                </td>
-                <td>
-                    <a href="{{ route('proveedor.create', $proveedor) }}" class="btn btn-primary">Eliminar</a>
-                </td> --}}
                 <td>
                     <div class="d-flex">
                         <a href="{{ route('proveedor.edit', $proveedor) }}" class="btn btn-primary mr-2">Editar</a>

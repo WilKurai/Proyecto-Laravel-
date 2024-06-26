@@ -35,8 +35,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/proveedor/{proveedor}/edit', [ProveedorController::class, 'edit'])->name('proveedor.edit');
     Route::put('/proveedor/{proveedor}', [ProveedorController::class, 'update'])->name('proveedor.update');
     Route::delete('/proveedor/{proveedor}', [ProveedorController::class, 'destroy'])->name('proveedor.destroy');
-    
 
-    Route::get('/finanzas', [FinanzasController::class,'index'])->name('finanzas.index');
+
+/*     Route::get('/finanzas', [FinanzasController::class,'index'])->name('finanzas.index');
+    Route::get('/finanzas/create',[FinanzasController::class,'create'])->name('finanzas.create');
+    Route::post('/finanzas', [FinanzasController::class,'store'])->name('finanzas.store');
+    Route::get('/finanzas/{finanzas}/edit', [FinanzasController::class, 'edit'])->name('finanzas.edit');
+    Route::put('/finanzas/{finanzas}', [FinanzasController::class, 'update'])->name('finanzas.update');
+    Route::delete('/finanzas/{finanzas}', [FinanzasController::class, 'destroy'])->name('finanzas.destroy'); */
+/*     Route::resource('finanzas', FinanzasController::class); */
 
 require __DIR__.'/auth.php';
