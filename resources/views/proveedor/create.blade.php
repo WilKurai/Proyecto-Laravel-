@@ -3,22 +3,23 @@
   <div class="max-w-md mx-auto">
 
     <h2 class="text-2xl font-bold mb-6">Agregar Proveedor</h2>
+    <span class="text-red-500 font-bold text-xs">Campos requeridos (*)</span>
     <form method="POST" action="{{ route('proveedor.store') }}" class="space-y-6">
         @csrf
         <div>
-        <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+        <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre <span class="text-red-500">*</span></label>
         <div class="mt-1">
           <input type="text" id="nombre" name="nombre" required class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Ingresa tu nombre">
         </div>
       </div>
       <div>
-        <label for="dirección" class="block text-sm font-medium text-gray-700">Dirección</label>
+        <label for="dirección" class="block text-sm font-medium text-gray-700">Dirección <span class="text-red-500">*</span></label>
         <div class="mt-1">
           <input type="text" id="dirección" name="dirección" required class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Ingresa tu dirección">
         </div>
       </div>
       <div>
-        <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono</label>
+        <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono <span class="text-red-500">*</span></label>
         <div class="mt-1">
           <input type="tel" id="telefono" name="telefono" required class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Ingresa tu número de teléfono">
         </div>

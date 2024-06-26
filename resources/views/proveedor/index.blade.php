@@ -49,14 +49,17 @@
                     {{$proveedor->telefono}}
                 </td>
                 <td>
-                    <div class="d-flex">
-                        <a href="{{ route('proveedor.edit', $proveedor) }}" class="btn btn-primary mr-2">Editar</a>
-                        <form action="{{ route('proveedor.destroy', $proveedor) }}" method="POST">
+                    <div class=" flex justify-star mb-4">
+                            <a href="{{ route('proveedor.edit', $proveedor) }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 text-sm rounded mr-2">
+                            Editar
+                            </a>
+                          <form action="{{ route('proveedor.destroy', $proveedor) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Eliminar</button>
-{{--                             <a href="{{ route('proveedor.edit', $proveedor) }}" class="btn btn-primary mr-2">Editar</a>
-                            <form action="{{ route('proveedor.destroy', $proveedor) }}" method="POST"> --}}
+                            {{-- <button type="submit" class="btn btn-danger">Eliminar</button> --}}
+                            <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 text-sm rounded mr-2">
+                                Eliminar
+                              </button>
                         </form>
                     </div>
                 </td>
