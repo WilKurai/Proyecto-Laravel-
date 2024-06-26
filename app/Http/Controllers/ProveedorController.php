@@ -21,9 +21,7 @@ class ProveedorController extends Controller
      */
     public function create()
     {
-        $proveedores = new Proveedor();
-
-        return view('proveedor.create', compact('proveedores'));
+        return view('proveedor.create');
     }
 
     /**
@@ -37,7 +35,7 @@ class ProveedorController extends Controller
             'telefono' => 'required|string|max:20',
         ]);
         Proveedor::create($validated);
-        return redirect()->route('proveedor.create')->with('success', 'Agregado con Éxito.');
+        return redirect()->route('proveedor.index')->with('success', 'Agregado con Éxito.');
     }
 
     /**
